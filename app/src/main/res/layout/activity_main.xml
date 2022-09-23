@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_home"
+        android:src="@drawable/banner1"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.constraintlayout.utils.widget.ImageFilterView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="@id/banner1"
+        app:layout_constraintBottom_toTopOf="@id/banner1"
+        app:layout_constraintStart_toStartOf="@id/banner1"
+        app:layout_constraintEnd_toEndOf="@id/banner1"
+        android:paddingTop="@dimen/padding_top_logo">
+    </ImageView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_semicenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:textColor="@color/primary"
+        app:layout_constraintBottom_toBottomOf="@id/gl_semicenter"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/gl_semicenter"
+        android:textStyle="bold"
+        android:textSize="@dimen/h1"/>
+
+    <EditText
+        android:id="@+id/number_email"
+        android:drawableLeft="@drawable/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/number_email"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/sign_in"
+        android:background="@drawable/rounded_edit"/>
+
+    <EditText
+        android:layout_margin="@dimen/default_margin"
+        android:drawableLeft="@drawable/lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="numberPassword"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/number_email"
+        android:background="@drawable/rounded_edit"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/elevation_one"
+        android:paddingStart="@dimen/button_padding"
+        android:paddingEnd="@dimen/button_padding"
+        app:layout_constraintTop_toBottomOf="@id/gl_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/sign_in_sole"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:background="@drawable/button"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

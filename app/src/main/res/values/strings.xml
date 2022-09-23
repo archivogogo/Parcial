@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Parcial</string>
+    <string name="sign_in">Sign In Now</string>
+    <string name="sign_in_sole">Sign In</string>
+    <string name="number_email">Phone Number or Email</string>
+    <string name="password">Password</string>
+    <string name="profile">PROFILE</string>
+    <string name="nombre">Primer nombre y primer apellido</string>
+    <string name="ejemplo_email">email@anahuac.mx</string>
+    <string name="horario">Horario de Clases</string>
+    <string name="materias">Materias</string>
+    <string name="calificaciones">Calificaciones</string>
+    <string name="pagos">Pago de Colegiatura</string>
+</resources>
